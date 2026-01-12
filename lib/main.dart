@@ -67,10 +67,6 @@ class MainMenuPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final titleStyle = Theme.of(context).textTheme.headlineLarge?.copyWith(
-          fontWeight: FontWeight.w800,
-        );
-
     return Scaffold(
       body: Center(
         child: ConstrainedBox(
@@ -80,33 +76,37 @@ class MainMenuPage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-               SizedBox(
-  height: 160,
-  child: Center(
-    child: Container(
-      width: 480,
-      height: 140,
-      padding: const EdgeInsets.all(8),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        border: Border.all(color: Colors.red, width: 2),
-        borderRadius: BorderRadius.circular(12),
-      ),
-      child: Image.asset(
-        'assets/logo_web.jpg',
-        fit: BoxFit.contain,
-        frameBuilder: (context, child, frame, _) {
-          if (frame == null) {
-            return const Center(child: Text('loading logo...'));
-          }
-          return child;
-        },
-        errorBuilder: (context, error, _) => Text('logo error: $error'),
-      ),
-    ),
-  ),
-),
-const SizedBox(height: 16),
+                // ---- LOGO ----
+                SizedBox(
+                  height: 160,
+                  child: Center(
+                    child: Container(
+                      width: 480,
+                      height: 140,
+                      padding: const EdgeInsets.all(8),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(color: Colors.red, width: 2),
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: Image.asset(
+                        'assets/logo_web.jpg',
+                        fit: BoxFit.contain,
+                        frameBuilder: (context, child, frame, _) {
+                          if (frame == null) {
+                            return const Center(child: Text('loading logo...'));
+                          }
+                          return child;
+                        },
+                        errorBuilder: (context, error, _) {
+                          return Text('logo error: $error');
+                        },
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 16),
+
                 SizedBox(
                   width: double.infinity,
                   height: 48,

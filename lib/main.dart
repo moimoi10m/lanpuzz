@@ -92,9 +92,7 @@ class MainMenuPage extends StatelessWidget {
         border: Border.all(color: Colors.red, width: 2),
         borderRadius: BorderRadius.circular(12),
       ),
-      child: Image.asset(
-        'assets/logo2.png',
-        fit: BoxFit.contain,
+      child: Image.asset('assets/logo_web.jpg', fit: BoxFit.contain)
         frameBuilder: (context, child, frame, _) {
           if (frame == null) {
             return const Center(child: Text('loading logo...'));

@@ -93,7 +93,7 @@ class MainMenuPage extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
       ),
       child: Image.asset(
-        'assets/logo.png',
+        'assets/logo2.png',
         fit: BoxFit.contain,
         frameBuilder: (context, child, frame, _) {
           if (frame == null) {

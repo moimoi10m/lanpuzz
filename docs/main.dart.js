@@ -68240,7 +68240,7 @@ M(a){var s,r=null,q=A.Z(a).ok.d
 if(q!=null)q.ps(B.cf)
 q=A.ahI(B.Fv,2)
 s=A.C2(12)
-return A.Gk(r,A.hs(new A.dO(B.xl,new A.cE(B.AC,A.Rq(A.c([A.h5(A.hs(A.CP(r,new A.us(A.aus(r,r,new A.rU("assets/logo.png",r,r)),new A.Wf(),new A.Wg(),B.xp,r),B.B,r,r,new A.e5(B.j,r,q,s,r,r,B.b5),r,140,r,B.dc,r,r,480),r,r),160,r),B.Jq,A.h5(A.as7(B.Bg,B.Ol,new A.Wh(a)),48,1/0),B.j1,A.h5(A.ajN(B.Bf,B.j4,new A.Wi(a)),48,1/0),B.j1,A.h5(A.ajN(B.Bb,B.wd,new A.Wj(a)),48,1/0)],t.F),B.aD,B.qi,B.ck),r),r),r,r))}}
+return A.Gk(r,A.hs(new A.dO(B.xl,new A.cE(B.AC,A.Rq(A.c([A.h5(A.hs(A.CP(r,new A.us(A.aus(r,r,new A.rU("assets/logo2.png",r,r)),new A.Wf(),new A.Wg(),B.xp,r),B.B,r,r,new A.e5(B.j,r,q,s,r,r,B.b5),r,140,r,B.dc,r,r,480),r,r),160,r),B.Jq,A.h5(A.as7(B.Bg,B.Ol,new A.Wh(a)),48,1/0),B.j1,A.h5(A.ajN(B.Bf,B.j4,new A.Wi(a)),48,1/0),B.j1,A.h5(A.ajN(B.Bb,B.wd,new A.Wj(a)),48,1/0)],t.F),B.aD,B.qi,B.ck),r),r),r,r))}}
 A.Wf.prototype={
 $4(a,b,c,d){if(c==null)return B.yK
 return b},

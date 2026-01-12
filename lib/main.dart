@@ -92,19 +92,18 @@ class MainMenuPage extends StatelessWidget {
         border: Border.all(color: Colors.red, width: 2),
         borderRadius: BorderRadius.circular(12),
       ),
-      child: Image.asset('assets/logo_web.jpg', fit: BoxFit.contain)
-        frameBuilder: (context, child, frame, _) {
-          if (frame == null) {
-            return const Center(child: Text('loading logo...'));
-          }
-          return child;
-        },
-        errorBuilder: (context, error, _) {
-          return Text('logo error: $error');
-        },
-      ),
-    ),
-  ),
+      child: Image.asset(
+  'assets/logo_web.jpg',
+  fit: BoxFit.contain,
+  frameBuilder: (context, child, frame, _) {
+    if (frame == null) {
+      return const Center(child: Text('loading logo...'));
+    }
+    return child;
+  },
+  errorBuilder: (context, error, _) {
+    return Text('logo error: $error');
+  },
 ),
 const SizedBox(height: 16),
                 SizedBox(

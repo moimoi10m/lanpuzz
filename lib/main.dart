@@ -80,24 +80,35 @@ class MainMenuPage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(
-  height: 160, // ロゴの表示領域を確保（ここは好みで調整）
+               SizedBox(
+  height: 160,
   child: Center(
-    child: Image.asset(
-      'assets/logo.png',
-      fit: BoxFit.contain,
-      // ここが重要：失敗したら原因を画面に出す
-      errorBuilder: (context, error, stackTrace) {
-        return Text(
-          'ロゴ読み込みエラー:\n$error',
-          textAlign: TextAlign.center,
-        );
-      },
+    child: Container(
+      width: 480,
+      height: 140,
+      padding: const EdgeInsets.all(8),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        border: Border.all(color: Colors.red, width: 2),
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: Image.asset(
+        'assets/logo.png',
+        fit: BoxFit.contain,
+        frameBuilder: (context, child, frame, _) {
+          if (frame == null) {
+            return const Center(child: Text('loading logo...'));
+          }
+          return child;
+        },
+        errorBuilder: (context, error, _) {
+          return Text('logo error: $error');
+        },
+      ),
     ),
   ),
 ),
 const SizedBox(height: 16),
-
                 SizedBox(
                   width: double.infinity,
                   height: 48,
